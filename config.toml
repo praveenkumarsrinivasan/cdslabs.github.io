@@ -10,6 +10,8 @@ Paginate = 5
 
 googleAnalytics = "UA-111359692-1"
 enableRobotsTXT = true
+disqusShortname = "cdslabs"
+
 
 [sitemap]
   changefreq = "monthly"
