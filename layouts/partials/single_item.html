@@ -1,0 +1,37 @@
+<div class="blog_holder">
+    {{ if and (isset .Params "image") .Params.image }}
+        <div class="blog_page_div"><img src="{{ .Params.image | absURL }}" class="blog_page_img"></div>
+    {{ end }}
+
+    <div class="content_wrapper">
+      {{ $author := index (.Site.Params.authors) (.Params.author_tag) }}
+
+      <h1 class="blog_page_heading">{{ .Title }}</h1>
+      <div class="blog_page_date">{{ $author.name }} | {{ .Date.Format "January 2, 2006" }}</div>
+      <div class="blog_cat">
+      {{ if and (isset .Params "categories") .Params.categories }}
+        {{ range .Params.categories }}
+            <a class="cat_link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}      
+      {{ end }}      
+      </div>
+      <div class="blog_cont_div">{{ .Content }}</div>
+
+      <div class="author_details">
+        <div class="author_details_cont">
+          
+
+          <div class="auth_image"><img src="{{ $author.pic | absURL }}"></div>
+          <div class="auth_name">
+            <h4 class="auth_name_written">Written By</h4>
+            <a href="mailto:{{ $author.email }}" class="auth_name_link w-inline-block">
+              <h4 class="auth_name_heading">{{ $author.name }}</h4>
+            </a>
+          </div>
+          <div class="auth_bio">
+            <p class="paragraph-3">{{ $author.bio }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

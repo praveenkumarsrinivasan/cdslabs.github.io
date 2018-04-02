@@ -1,0 +1,39 @@
+<div class="blog_cat">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+          
+        <a class="cat_link" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+          
+      {{ end }}
+</div>
+
+{{ range sort .Paginator.Pages }}
+<div class="blog">
+    {{ if and (isset .Params "image") .Params.image }}
+      <div class="blog_img_div"><img src="{{ .Params.image | absURL }}" class="blog_image"></div>
+    {{ end }}
+    <div class="blog_details">
+        <a href="{{ .Permalink }}" class="heading_link w-inline-block"><h1 class="blog_heading">{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h1></a>
+        
+        <div class="blog_date">{{ .Date.Format "January 2, 2006" }}</div>
+
+        {{ if and (isset .Params "categories") .Params.categories }}
+          {{ range .Params.categories }}
+              <a class="cat_link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          {{ end }}      
+        {{ end }}      
+
+        <p class="blog_content">{{ .Summary | plainify | safeHTML }} {{ if .Truncated }} ...
+            <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+          </a> {{ end }}
+        </p>
+    </div>
+</div>
+{{ end }}
+
+{{ partial "pager.html" . }}
+
+

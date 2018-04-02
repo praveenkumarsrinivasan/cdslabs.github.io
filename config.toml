@@ -1,0 +1,41 @@
+baseURL = "http://cdslabs.co.nz/"
+languageCode = "en-us"
+title = "CDS Labs"
+publishDir = "docs"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 5
+
+googleAnalytics = "UA-111359692-1"
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params.authors]
+    [params.authors.praveen] 
+      name = "Praveen Kumar Srinivasan"
+      pic = "images/prav.png"
+      bio = "Director | Data Scientist"
+      email = "praveen@cdslabs.co.nz"
+      facebook = ""
+      twitter = ""
+      instagram = ""
+      youtube = ""
+      github = ""
+      linkedin = ""
+    [params.authors.anjali]
+      name = "Anjali Gupta"
+      pic = "images/anj.png"
+      bio = "Director | Statistician"
+      email = "anjali@cdslabs.co.nz"
+      facebook = ""
+      twitter = ""
+      instagram = ""
+      youtube = ""
+      github = ""
+      linkedin = ""

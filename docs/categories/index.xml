@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on CDS Labs</title>
+    <link>http://cdslabs.co.nz/categories/</link>
+    <description>Recent content in Categories on CDS Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://cdslabs.co.nz/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>General</title>
+      <link>http://cdslabs.co.nz/categories/general/</link>
+      <pubDate>Fri, 30 Mar 2018 23:34:53 +1300</pubDate>
+      
+      <guid>http://cdslabs.co.nz/categories/general/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

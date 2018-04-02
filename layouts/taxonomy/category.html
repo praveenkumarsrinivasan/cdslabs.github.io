@@ -1,0 +1,8 @@
+{{ define "nav" }}
+    <a href="/blog/" class="nav-link w-nav-link">Blog</a>
+{{end}}
+
+{{ define "main" }}
+    <h1 class="blog_title">Blogs - {{ .Title }}</h1>
+    {{ partial "list_blogs.html" . }}
+{{end}}
