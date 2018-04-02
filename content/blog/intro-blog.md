@@ -2,7 +2,7 @@
 title: "Welcome to CDS Labs"
 date: 2018-03-30T23:34:53+13:00
 draft: false
-image: "images/mus.jpg"
+image: "images/mus.jpeg"
 author_tag: "anjali"
 categories : [
     "General",
